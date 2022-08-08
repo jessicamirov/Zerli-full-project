@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Text?>
+
+<GridPane prefHeight="400.0" prefWidth="600.0" styleClass="header" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.controller.HeaderController">
+   <columnConstraints>
+      <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+   </rowConstraints>
+   <children>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="logo" text="Zerli" wrappingWidth="45.103515625" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
+      <Button mnemonicParsing="false" onAction="#onBack" styleClass="back-button" GridPane.halignment="LEFT" GridPane.valignment="CENTER" />
+      <Text fx:id="welcome" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="welcome" text="Welcome" wrappingWidth="453.13671875" GridPane.columnSpan="5" GridPane.rowIndex="1" />
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" styleClass="search-box" GridPane.columnIndex="2" GridPane.columnSpan="2">
+         <children>
+            <TextField id="search_text" fx:id="search_text" alignment="CENTER" promptText="Search">
+               <HBox.margin>
+                  <Insets top="1.0" />
+               </HBox.margin></TextField>
+            <Button id="search_button" fx:id="search" alignment="CENTER_RIGHT" graphicTextGap="0.0" mnemonicParsing="false" onAction="#onSearch">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin></Button>
+         </children>
+      </HBox>
+      <Button fx:id="login" alignment="CENTER" mnemonicParsing="false" onAction="#onLogin" styleClass="login-button" text="Login" GridPane.columnIndex="4" />
+      <Button fx:id="checkout" mnemonicParsing="false" onAction="#onCheckOut" styleClass="checkout-button" GridPane.columnIndex="5" GridPane.rowSpan="2" />
+      <Button mnemonicParsing="false" onAction="#onHome" styleClass="home-button" />
+      <Button fx:id="account" alignment="CENTER_RIGHT" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#onAccount" styleClass="account-button" GridPane.halignment="RIGHT" GridPane.valignment="CENTER" />
+   </children>
+</GridPane>

@@ -1,0 +1,53 @@
+/*
+Color scheme:
+	#d2d8c0 - Header BG
+	#215732 - Button BG
+	#558263 - Button hover
+	
+*/
+
+/* Font family for whole site: */
+@font-face {
+    src: url('SnellRoundhandScript.ttf');
+}
+
+/* Currently does not work! Need to load a font from ttf as SnellRoundhandScript. */
+* {
+	-fx-font-size: 14px;
+	-fx-font-family: "Noto Sans";
+}
+
+/* Add here all objects that should have a maximum width: */
+.home > VBox > Button {	
+	-fx-pref-width: 10000;
+}
+
+Button {
+	-fx-background-color: #215732;
+	-fx-text-fill: white;
+}
+Button:hover {
+	-fx-background-color: #558263;
+}
+
+.home {
+	-fx-background-image: url('home.jpg');
+	-fx-background-position: center;
+	-fx-background-repeat: no-repeat;
+	-fx-background-size: cover;
+}
+.home > Text {
+	-fx-fill: #215732;
+	-fx-font-family: "Snell Roundhand Script";
+	-fx-font-size: 40px;
+}
+.home > VBox {
+	-fx-padding: 0 40px 0 40px;
+}
+
+/* END HOME */
+.error-text {
+	-fx-font-size: 14px;
+	-fx-font-family: "Noto Sans";
+	-fx-fill: #215732;
+}

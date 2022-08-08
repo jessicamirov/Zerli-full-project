@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" styleClass="header-section" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.controller.HomeController">
+   <children>
+      <GridPane alignment="CENTER" layoutX="32.0" layoutY="72.0" prefHeight="600.0" prefWidth="800.0" styleClass="home" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="60.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" percentHeight="45.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" percentHeight="45.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Zerli" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP" />
+            <VBox alignment="CENTER" spacing="10.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <children>
+                  <Button fx:id="buttonView" disable="true" mnemonicParsing="false" onAction="#onView" text="View" />
+                  <Button fx:id="buttonUserChange" disable="true" mnemonicParsing="false" onAction="#onUserChange" text="Login" />
+                  <Button fx:id="buttonConnect" mnemonicParsing="false" onAction="#onConnect" text="Connect" />
+               </children>
+            </VBox>
+            <TextField fx:id="hostName" promptText="host (localhost)" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+               <GridPane.margin>
+                  <Insets left="40.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="portNumber" promptText="port (5555)" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+               <GridPane.margin>
+                  <Insets left="10.0" right="10.0" />
+               </GridPane.margin>
+            </TextField>
+            <Text fx:id="errorMessage" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="error-text" text="Not connected to server" GridPane.rowIndex="2" GridPane.valignment="TOP">
+               <GridPane.margin>
+                  <Insets left="40.0" />
+               </GridPane.margin>
+            </Text>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

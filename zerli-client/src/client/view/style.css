@@ -1,0 +1,178 @@
+/*
+Color scheme:
+	#d2d8c0 - Header BG
+	#215732 - Button BG
+	#558263 - Button hover
+	
+*/
+
+/* Font family for whole site: */
+@font-face {
+    src: url('fonts/SnellRoundhandScript.ttf');
+}
+
+/* Currently does not work! Need to load a font from comtroller. */
+* {
+	-fx-font-size: 14px;
+	-fx-font-family: "Noto Sans";
+}
+
+/* Add here all objects that should have a maximum height: */
+.back-button, .home-button, .account-button {
+	-fx-pref-height: 10000;
+}
+/* Add here all objects that should have a maximum width: */
+.search-box > TextField, .home > VBox > Button, .signin > VBox > Button, .category-menu > VBox > Button, .product-view > Button, .product-view > Text {	
+	-fx-pref-width: 10000;
+}
+
+/* HEADER: */
+Button {
+	-fx-background-color: #215732;
+	-fx-text-fill: white;
+}
+Button:hover {
+	-fx-background-color: #558263;
+}
+.header {
+	-fx-padding: 5px;
+	-fx-background-color: #d2d8c0;
+}
+.back-button, .home-button, .account-button, .search-box > Button {
+	-fx-background-position: center;
+	-fx-background-repeat: no-repeat;
+	-fx-background-size: 20;
+	-fx-min-width: 25;
+}
+
+.back-button {
+	-fx-background-image: url('icons/icons8-back-50.png');
+}
+.home-button {
+	-fx-background-image: url('icons/icons8-home-50.png');
+}
+.account-button {
+	-fx-background-image: url('icons/icons8-customer-50.png');
+}
+
+.logo {
+	-fx-fill: #215732;
+	-fx-font-family: "Snell Roundhand Script";
+	-fx-font-size: 24px;
+}
+
+/* Search: */
+.search-box > Button {
+	-fx-background-image: url('icons/icons8-search-50.png');
+	-fx-min-height: 31;
+
+}
+.search-box > TextField {
+	-fx-margin: 0 0 10 0;
+	-fx-min-height: 34;
+}
+
+.login-button {}
+
+.checkout-button {
+	-fx-background-image: url('icons/icons8-shopping-cart-50.png');
+}
+.modify-button {
+	-fx-background-image: url('icons/icons8-inbox-settings-50.png');
+}
+.checkout-button, .modify-button {
+	-fx-background-position: center;
+	-fx-background-repeat: no-repeat;
+	-fx-background-size: 40;
+	-fx-min-height: 60;
+	-fx-min-width: 60;
+}
+
+.welcome {
+	-fx-fill: #215732;
+	-fx-font-size: 20px;
+}
+
+/* END HEADER */
+
+/* SHOP */
+.category-menu {
+	/* -fx-padding: 10px; */
+	-fx-background-color: #eaece4;
+}
+
+.category-menu > Text {
+	-fx-fill: #215732;
+}
+
+.shop-main {
+	-fx-padding: 0 10px;
+}
+.shop-main > Text {
+	-fx-fill: #215732;
+}
+
+/* HOME */
+
+.home {
+	-fx-background-image: url('images/home.jpg');
+	-fx-background-position: center;
+	-fx-background-repeat: no-repeat;
+	-fx-background-size: cover;
+}
+.home > Text {
+	-fx-fill: #215732;
+	-fx-font-family: "Snell Roundhand Script";
+	-fx-font-size: 70px;
+}
+.home > VBox {
+	-fx-padding: 0 40px 0 0;
+}
+
+/* END HOME */
+
+/* SIGNIN */
+.signin {
+	-fx-padding: 5px;
+	-fx-background-color: #eaece4;
+}
+.signin > Text, .missing > Text {
+	-fx-fill: #215732;
+	-fx-font-family: "Snell Roundhand Script";
+	-fx-font-size: 70px;
+}
+.signin > VBox {
+}
+.signin > VBox > Button {
+}
+.missing {
+	-fx-padding: 5px;
+	-fx-background-color: #eaece4;
+}
+.category-menu > VBox {
+	-fx-padding: 5px;
+}
+
+.product-view {
+	-fx-padding: 5px;
+}
+.product-view > Text {
+}
+.product-view > Button {
+	-fx-background-color: #eaece4;
+	-fx-text-fill: #215732;
+}
+.product-view > ImageView {
+
+}
+.report-table {
+	-fx-padding: 5px;
+}
+.order-table {
+	-fx-padding: 5px;
+}
+.error-text {
+	-fx-font-size: 14px;
+	-fx-font-family: "Noto Sans";
+	-fx-fill: #215732;
+}

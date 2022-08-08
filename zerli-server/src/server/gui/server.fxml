@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" styleClass="header-section" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="server.gui.ServerController">
+   <children>
+      <GridPane alignment="CENTER" layoutX="32.0" layoutY="72.0" prefHeight="500.0" prefWidth="700.0" styleClass="home" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" />
+            <ColumnConstraints hgrow="SOMETIMES" percentWidth="30.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints percentHeight="20.0" vgrow="SOMETIMES" />
+          <RowConstraints vgrow="SOMETIMES" />
+            <RowConstraints percentHeight="25.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Zerli Server" GridPane.columnSpan="2" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+               <GridPane.margin>
+                  <Insets left="40.0" />
+               </GridPane.margin></Text>
+            <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" spacing="10.0" GridPane.rowIndex="1" GridPane.rowSpan="2">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Server port:" />
+                  <TextField fx:id="portText" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="SQL URL:" />
+                  <TextField fx:id="urlText" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="SQL username:" />
+                  <TextField fx:id="usernameText" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="SQL password:" />
+                  <PasswordField fx:id="passwordText" />
+               </children>
+            </VBox>
+            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <children>
+                  <Button fx:id="buttonConnect" mnemonicParsing="false" onAction="#onConnect" text="Connect" />
+                  <Button mnemonicParsing="false" onAction="#onDefault" text="Default" />
+                  <Button mnemonicParsing="false" onAction="#onImport" text="Import Users" />
+               </children>
+               <GridPane.margin>
+                  <Insets left="-40.0" />
+               </GridPane.margin>
+            </VBox>
+            <VBox alignment="BOTTOM_LEFT" prefHeight="200.0" prefWidth="100.0" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <children>
+                  <Text fx:id="serverMessage" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="error-text" text="Server Offline" />
+                  <Text fx:id="sqlMessage" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="error-text" text="SQL Offline" />
+               </children>
+               <GridPane.margin>
+                  <Insets bottom="20.0" left="-40.0" top="40.0" />
+               </GridPane.margin>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </VBox>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
